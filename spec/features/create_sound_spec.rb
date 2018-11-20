@@ -1,6 +1,15 @@
 feature 'create sound' do
+
+  scenario 'visit create sound page' do
+    create_sound_page
+    expect(page).to have_field('title')
+    expect(page).to have_field('artist')
+    expect(page).to have_field('genre')
+    expect(page).to have_field('release_date')
+  end
+
   scenario 'submit new sound form' do
-    index_page
+    create_sound_page
     new_sound_form
     click_button('submit')
     expect(page).to have_content('lil laugh')

@@ -7,6 +7,11 @@ def sound_page
   visit('/sounds')
 end
 
+def create_sound_page
+  index_page
+  click_link('create_sounds')
+end
+
 def new_sound_form
   fill_in('title', with: 'haha')
   fill_in('artist', with: 'lil laugh')
