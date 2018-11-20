@@ -1,13 +1,15 @@
 <head>
-<link rel="stylesheet" type="text/css" href="<%= url('/css/sounds.css') %>" />
+<link rel='stylesheet' type='text/css' href="<%= url('/css/sounds.css') %>" />
 </head>
 <body>
   <% @sounds.each do |sound| %>
       <ul>
-        <li>Title: <%= sound["title"] %></li>
-        <li>Artist: <%= sound["artist"] %></li>
-        <li>Genre: <%= sound["genre"] %></li>
-        <li>Released: <%= sound["release_year"] %></li>
+        <li>Title: <%= sound['title'] %></li>
+        <li>Artist: <%= sound['artist'] %></li>
+        <li>Genre: <%= sound['genre'] %></li>
+        <li>Released: <%= sound['release_year'] %></li>
       </ul>
   <% end %>
+
+<a href="/" id='back' class="btn">back</a>
 </body>

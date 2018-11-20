@@ -9,6 +9,7 @@ feature 'Sounds' do
 
   scenario 'return back to index page' do
     visit('/sounds')
+    click_link('back')
     expect(page).to have_content('SoundAttic')
     expect(page).not_to have_content('biglife.mp3')
   end
