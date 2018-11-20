@@ -1,5 +1,8 @@
-<ul>
-  <% @sounds.each do |sound| %>
-    <li><%= sound %></li>
-  <% end %>
-</ul>
+<% @sounds.each do |sound| %>
+  <ul>
+    <li>Title: <%= sound["title"] %></li>
+    <li>Artist: <%= sound["artist"] %></li>
+    <li>Genre: <%= sound["genre"] %></li>
+    <li>Released: <%= sound["release_year"] %></li>
+  </ul>
+ <% end %>

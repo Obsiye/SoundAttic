@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/sounds.rb'
 
 class SoundAttic < Sinatra::Base
 
@@ -7,7 +8,7 @@ class SoundAttic < Sinatra::Base
   end
 
   get '/sounds' do
-    @sounds = ['biglife.mp3', 'havocroad.mp3', 'lilnoway.mp3']
+    @sounds = Sounds.all
     erb(:sounds)
   end
 
