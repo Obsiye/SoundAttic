@@ -1,15 +1,17 @@
+
+
+RSpec.configure do |config|
 ENV['RACK_ENV'] = 'test'
 
+require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
-
+require './spec/features/web_helpers.rb'
 require_relative '.././app.rb'
 
 Capybara.app = SoundAttic
-
-RSpec.configure do |config|
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
