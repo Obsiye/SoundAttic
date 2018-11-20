@@ -12,11 +12,12 @@ class SoundAttic < Sinatra::Base
     erb(:sounds)
   end
 
-  get '/create' do
-    erb(:create)
+  get '/sounds/create' do
+    erb :'sounds/create'
   end
 
   post '/create' do
+    redirect '/sounds'
   end
 
 end
