@@ -7,9 +7,9 @@ gem 'rake'
 gem 'sinatra'
 
 group :test do
-    gem 'capybara'
-    gem 'rspec'
-    gem 'rubocop', '0.56.0'
-    gem 'simplecov'
-    gem 'simplecov-console'
+  gem 'capybara'
+  gem 'rspec'
+  gem 'rubocop', '0.56.0'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end
