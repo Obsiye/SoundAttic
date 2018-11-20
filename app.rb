@@ -6,4 +6,9 @@ class SoundAttic < Sinatra::Base
     erb(:index)
   end
 
+  get '/sounds' do
+    @sounds = ['biglife.mp3', 'havocroad.mp3', 'lilnoway.mp3']
+    erb(:sounds)
+  end
+
 end
