@@ -6,7 +6,7 @@ class Sounds
     database = 'sounds'
     database = 'sounds_test' if ENV['ENVIRONMENT'] == 'test'
     db = PG.connect(dbname: database)
-    result = db.exec('SELECT * FROM SOUNDS')
+    result = db.exec('SELECT * FROM sounds')
     result.map { |sound| sound }
   end
 
