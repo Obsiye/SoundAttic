@@ -14,6 +14,6 @@ feature 'create sound' do
     click_button('submit')
     expect(page).to have_content('lil laugh')
     expect(page).to have_content('haha')
-    expect(page).to have_content('2017-09-19')
+    expect(page).to have_content(DATE)
   end
 end

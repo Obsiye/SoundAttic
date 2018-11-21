@@ -8,9 +8,12 @@ class Sounds
     result.map { |sound| sound }
   end
 
-  def self.create
+  def self.create(sound)
     db = connect
-    statement = "INSERT INTO sounds(title, genre, artist, release_year) VALUES('biglife.mp3', 'POP', 'Bella Yawn');"
+    values = "'#{sound[:title]}', '#{sound[:genre]}', '#{sound[:artist]}', '#{sound[:release_year]}'"
+    puts "date is #{sound[:release_year]}."
+    puts "hello the sound year is #{sound[:release_year]}"
+    statement = "INSERT INTO sounds(title, genre, artist, release_year) VALUES(#{values});"
     result =   db.exec(statement)
   end
 
