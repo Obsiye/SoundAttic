@@ -17,7 +17,8 @@ describe Sounds do
 
   describe '#add' do
     it 'submits sound as record into sounds database' do
-      sounds = Sounds.add('john')
+      sounds = Sounds.create('john')
+      expect(Sounds.create.first[:title]). to eq 'john'
     end
   end
 end
