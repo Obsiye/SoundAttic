@@ -8,7 +8,6 @@ describe Sounds do
 
   describe '#all' do
     it 'returns an array of sounds' do
-
       populate_database(@db)
       sounds = Sounds.all
       

@@ -18,7 +18,7 @@ Capybara.app = SoundAttic
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  config.before(:each) do
+  config.before :each do
     setup_test_database
   end
 

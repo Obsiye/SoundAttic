@@ -11,7 +11,6 @@ class Sounds
   end
 
   def self.create
-    
   end
 
 end
