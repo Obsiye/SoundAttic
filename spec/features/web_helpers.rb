@@ -18,3 +18,8 @@ def new_sound_form
   fill_in('genre', with: 'RAP')
   fill_in('release_date', with: '2017-09-19')
 end
+
+def setup_test_database
+  db = PG.connect(dbname: 'sounds_test')
+  db.exec('TRUNCATE sounds_test')
+end

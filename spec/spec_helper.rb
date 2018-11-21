@@ -2,6 +2,7 @@
 
 RSpec.configure do |config|
 ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 require 'capybara'
 require 'capybara/rspec'
@@ -15,6 +16,10 @@ Capybara.app = SoundAttic
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+
+  config.before(:each) do
+    setup_test_database
   end
 
   config.mock_with :rspec do |mocks|
